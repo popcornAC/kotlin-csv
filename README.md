@@ -1,7 +1,7 @@
 <h1 align="center">kotlin-csv</h1>
 
 <p>
-  <img alt="Version" src="https://img.shields.io/badge/version-1.7.0-blue.svg?cacheSeconds=2592000" />
+  <img alt="Version" src="https://img.shields.io/badge/version-1.8.0-blue.svg?cacheSeconds=2592000" />
   <a href="https://github.com/doyaaaaaken/kotlin-csv/blob/master/LICENSE">
     <img alt="License: Apache License 2.0" src="https://img.shields.io/badge/License-Apache License 2.0-yellow.svg" target="_blank" />
   </a>
@@ -30,7 +30,7 @@ Pure Kotlin CSV Reader/Writer.
 
 ### 3. Multiplatform
 
-* kotlin multiplatform project
+* Kotlin Multiplatform projects support.
 
 # Usage
 
@@ -39,13 +39,13 @@ Pure Kotlin CSV Reader/Writer.
 ### Gradle
 
 ```gradle
-//gradle kotlin DSL
-implementation("com.github.doyaaaaaken:kotlin-csv-jvm:1.7.0") //for JVM platform
-implementation("com.github.doyaaaaaken:kotlin-csv-js:1.7.0") //for Kotlin JS platform
+// Gradle Kotlin DSL
+implementation("com.github.doyaaaaaken:kotlin-csv-jvm:1.8.0") // for JVM platform
+implementation("com.github.doyaaaaaken:kotlin-csv-js:1.8.0") // for Kotlin JS platform
 
-//gradle groovy DSL
-implementation 'com.github.doyaaaaaken:kotlin-csv-jvm:1.7.0' //for JVM platform
-implementation 'com.github.doyaaaaaken:kotlin-csv-js:1.7.0' //for Kotlin JS platform
+// Gradle Groovy DSL
+implementation 'com.github.doyaaaaaken:kotlin-csv-jvm:1.8.0' // for JVM platform
+implementation 'com.github.doyaaaaaken:kotlin-csv-js:1.8.0' // for Kotlin JS platform
 ```
 
 ### Maven
@@ -54,22 +54,20 @@ implementation 'com.github.doyaaaaaken:kotlin-csv-js:1.7.0' //for Kotlin JS plat
 <dependency>
   <groupId>com.github.doyaaaaaken</groupId>
   <artifactId>kotlin-csv-jvm</artifactId>
-  <version>1.7.0</version>
+  <version>1.8.0</version>
 </dependency>
 <dependency>
   <groupId>com.github.doyaaaaaken</groupId>
   <artifactId>kotlin-csv-js</artifactId>
-  <version>1.7.0</version>
+  <version>1.8.0</version>
 </dependency>
 ```
 
-[kscript](https://github.com/holgerbrandl/kscript)
+### [kscript](https://github.com/holgerbrandl/kscript)
 
 ```kotlin
-@file:DependsOn("com.github.doyaaaaaken:kotlin-csv-jvm:1.7.0") //for JVM platform
-@file:DependsOn("com.github.doyaaaaaken:kotlin-csv-js:1.7.0")
-
-//for Kotlin JS platform
+@file:DependsOn("com.github.doyaaaaaken:kotlin-csv-jvm:1.8.0") // for JVM platform
+@file:DependsOn("com.github.doyaaaaaken:kotlin-csv-js:1.8.0") // for Kotlin JS platform
 ```
 
 ## Examples
@@ -104,7 +102,7 @@ println(rows) //[{a=d, b=e, c=f}]
 `Sequence` type allows to execute lazily.<br />
 It starts to process each rows before reading all row data.
 
-See detail about `Sequence` type on [Kotlin official document](https://kotlinlang.org/docs/reference/sequences.html).
+Learn more about the `Sequence` type on [Kotlin's official documentation](https://kotlinlang.org/docs/reference/sequences.html).
 
 ```kotlin
 csvReader().open("test1.csv") {
@@ -122,7 +120,7 @@ csvReader().open("test2.csv") {
 }
 ```
 
-NOTE:`readAllAsSequence` and `readAllWithHeaderAsSequence` methods can only be called within the `open` lambda block.
+NOTE: `readAllAsSequence` and `readAllWithHeaderAsSequence` methods can only be called within the `open` lambda block.
 The input stream is closed after the `open` lambda block.
 
 #### Read line by line
